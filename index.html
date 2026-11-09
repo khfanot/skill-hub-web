@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skill Hub – Skill cho Claude, đã chọn lọc</title>
+<meta name="description" content="Danh sách skill cho Claude được chọn lọc từ các kho nhiều sao nhất trên GitHub, kèm giấy phép rõ ràng và skill mẫu miễn phí.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#danh-sach">Bỏ qua tới danh sách skill</a>
+<header class="top">
+  <a class="brand" href="#">Skill Hub</a>
+  <nav aria-label="Chính">
+    <a href="#danh-sach">Danh sách</a>
+    <a href="#cach-dung">Cách dùng</a>
+    <a href="#mien-phi">Skill miễn phí</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Skill cho Claude, đã chọn sẵn để bạn khỏi phải lục từng kho.</h1>
+    <p class="lead">Mỗi ngày chúng tôi theo dõi các kho skill được gắn sao nhiều nhất trên GitHub, đọc giấy phép và giữ lại những bộ đáng dùng.</p>
+    <p><a class="btn" href="#danh-sach">Xem danh sách</a><a class="link" href="#mien-phi">Lấy skill miễn phí</a></p>
+  </section>
+
+  <section id="danh-sach" class="block">
+    <div class="head">
+      <h2>Các bộ skill đang theo dõi</h2>
+      <div class="filters" role="group" aria-label="Lọc theo chủ đề" id="filters"></div>
+    </div>
+    <ol class="ledger" id="ledger" aria-live="polite"></ol>
+    <p class="note">Số sao lấy trực tiếp từ GitHub khi bạn mở trang. Mọi skill thuộc về tác giả gốc; bấm vào tên để xem nguồn và giấy phép đầy đủ.</p>
+  </section>
+
+  <section id="cach-dung" class="block prose">
+    <h2>Cách dùng một skill</h2>
+    <p>Skill là một thư mục chứa tệp <code>SKILL.md</code> dạy Claude cách làm một việc. Để dùng, bạn tải thư mục đó về rồi đặt vào <code>.claude/skills</code> trong dự án của bạn. Lần sau mở Claude Code ở dự án này, nó sẽ tự biết skill có sẵn.</p>
+    <p>Trước khi dùng, hãy mở <code>SKILL.md</code> và đọc qua. Skill có thể yêu cầu Claude chạy lệnh trên máy bạn, nên chỉ dùng skill từ nguồn bạn tin.</p>
+  </section>
+
+  <section id="mien-phi" class="block prose">
+    <h2>Skill mẫu miễn phí</h2>
+    <p><strong>giải-thích-cho-người-mới</strong> giúp Claude trả lời bằng tiếng Việt dễ hiểu, từng bước một, cho người không rành kỹ thuật. Giấy phép MIT, bạn dùng và sửa thoải mái.</p>
+    <p><a class="btn" href="skills/giai-thich-cho-nguoi-moi/SKILL.md" download>Tải SKILL.md</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>Skill Hub không sở hữu các skill được liệt kê. Tên, mã nguồn và giấy phép thuộc về từng tác giả.</p>
+</footer>
+<script src="data/skills.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
