@@ -7,3 +7,6 @@ Code trang web công khai và skill mẫu miễn phí.
 
 ## Nguồn và giấy phép
 Các skill được liệt kê thuộc về tác giả gốc; trang chỉ trỏ tới kho của họ và ghi lại giấy phép. Xem giấy phép từng kho trước khi dùng lại.
+
+## Nối với dịch vụ admin
+Đặt địa chỉ dịch vụ `admin-api` (repo skill-hub-core) vào `assets/config.js`. Trang sẽ lấy danh sách skill do admin chọn từ `/public/skills`; nếu dịch vụ không chạy, trang dùng `data/skills.js`.

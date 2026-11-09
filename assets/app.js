@@ -1,5 +1,6 @@
 (function () {
   var skills = window.SKILLS || [];
+  var api = (window.SKILLHUB_API || '').replace(/\/$/, '');
   var ledger = document.getElementById('ledger');
   var filters = document.getElementById('filters');
   var stars = {};
@@ -61,7 +62,13 @@
     });
   }
 
-  buildFilters();
-  render();
-  loadStars();
+  function start() { buildFilters(); render(); loadStars(); }
+  if (!api) { start(); return; }
+  fetch(api + "/public/skills")
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (list) {
+      skills = list.map(function (s) { stars[s.repo] = s.stars; return s; });
+    })
+    .catch(function () {})
+    .then(start);
 })();
